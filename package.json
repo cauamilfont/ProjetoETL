@@ -1,13 +1,16 @@
 {
   "name": "meu_projeto_etl",
   "version": "1.0.0",
-  "description": "",
+  "description": "Pipeline ETL para dados SINASC 2022",
   "main": "index.js",
   "scripts": {
+    "start": "node scripts/2_transform_silver.js && node scripts/3_aggregate_gold.js",
+    "silver": "node scripts/2_transform_silver.js",
+    "gold": "node scripts/3_aggregate_gold.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["etl", "datasus", "sinasc", "saude"],
+  "author": "Seu Nome",
   "license": "ISC",
   "dependencies": {
     "axios": "^1.13.0",
